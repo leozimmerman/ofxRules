@@ -250,6 +250,22 @@ namespace itg
         currentDepth = 0;
     }
     
+    //myFuncs-tweak---------
+    void Rules::clearRuleSets()
+    {
+        ruleSets.clear();
+    }
+    void Rules::reset()
+    {
+        
+        branches.clear();
+        numSteps = 0;
+        currentDepth = 0;
+        
+    }
+    
+    //--------------------------
+    
     Rule::Ptr Rules::addRule(const string& ruleName, float weight)
     {
         if (!ruleSets[ruleName]) ruleSets[ruleName] = RuleSet::Ptr(new RuleSet(ruleName));

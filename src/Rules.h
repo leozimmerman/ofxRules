@@ -60,6 +60,14 @@ namespace itg
         
         void start();
         
+        //myFuncs-----------tweak
+        void clearRuleSets();
+        void reset();
+        bool isEnableVerColours(){return enableVertexColours;}
+        void setEnableVertexColours(bool b){enableVertexColours = b;}
+        
+        //------------------
+        
         Rule::Ptr addRule(const string& ruleName, float weight);
         
         Branch::Ptr addBranch(const string& ruleName, const ofMatrix4x4& transform = ofMatrix4x4());
