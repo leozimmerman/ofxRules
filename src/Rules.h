@@ -58,15 +58,11 @@ namespace itg
         
         void clear();
         
-        void start();
-        
-        //myFuncs-----------tweak
+        //myFunc
         void clearRuleSets();
         void reset();
-        bool isEnableVerColours(){return enableVertexColours;}
-        void setEnableVertexColours(bool b){enableVertexColours = b;}
         
-        //------------------
+        void start();
         
         Rule::Ptr addRule(const string& ruleName, float weight);
         
@@ -105,6 +101,10 @@ namespace itg
         
         ofVboMesh& getMeshRef() { return mesh; }
         
+        bool isEnableVerColours(){return enableVertexColours;}///tweaked_Leo*****
+        
+        void setEnableVertexColours(bool b){enableVertexColours = b;}///tweaked_leo****
+        
     private:
         string startRule;
         void onUpdate(ofEventArgs& args);
@@ -123,7 +123,7 @@ namespace itg
         ofFloatColor wireframeColour;
         
         // file watching stuff
-        std::time_t watchedLastModified;
+        Poco::Timestamp watchedLastModified;
         string watchedFileName;
         float lastChecked;
         float checkPeriod;

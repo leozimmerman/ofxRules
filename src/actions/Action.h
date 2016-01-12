@@ -36,6 +36,8 @@
 
 namespace itg
 {
+    using namespace tr1;
+    
     class Action
     {
     public:

@@ -53,6 +53,8 @@ namespace itg
         
         void setResolution(unsigned resolution) { this->resolution = resolution; }
         
+        
+        
     private:
         // vertices per slice
         unsigned resolution;
